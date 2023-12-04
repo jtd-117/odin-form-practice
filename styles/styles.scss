@@ -3,10 +3,20 @@
  * @description Implments the styles for the sign-up form (i.e. index.html)
  */
 
+@font-face {
+    font-family: 'norse-bold';
+    src: url("../assets/norse-bold.otf");
+}
+
 $form-width: 62.5%;
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
+    padding: 0;
     display: flex;
     flex-flow: row wrap;
 }
@@ -14,15 +24,35 @@ body {
 section#logos,
 section#form {
     block-size: 100vh;
-    padding: 40px;
 }
 
 section#logos {
     flex: 1;
-    background-color: gray;
+
+    header {
+        margin-top: 100px;
+        block-size: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gray;
+
+        img {
+            block-size: 6em;
+        }
+
+        h1 {
+            padding: 0;
+            font-family: 'norse-bold';
+            font-size: 6rem;
+        }
+    }
+    // REMOVE LATER - for viewing partitions
+    background-color: darkgray;
 }
 
 section#form {
+    padding: 1rem;
     // flex: grow shrink basis
     flex: 0 0 $form-width;
 }
