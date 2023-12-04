@@ -28,27 +28,34 @@ section#form {
 
 section#logos {
     flex: 1;
+    background-image: url("../assets/wallpaper.jpeg");
+    background-size: cover;
 
     header {
         margin-top: 100px;
         block-size: 120px;
+
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: gray;
-
+        
+        background-color: black;
+        opacity: 0.8;
+        
         img {
             block-size: 6em;
         }
 
         h1 {
-            padding: 0;
+            padding-top: 20px;
+            margin: 0;
             font-family: 'norse-bold';
             font-size: 6rem;
+            color: white;
         }
     }
     // REMOVE LATER - for viewing partitions
-    background-color: darkgray;
+    background-color: gray;
 }
 
 section#form {
