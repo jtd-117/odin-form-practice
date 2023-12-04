@@ -3,3 +3,26 @@
  * @description Implments the styles for the sign-up form (i.e. index.html)
  */
 
+$form-width: 62.5%;
+
+body {
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section#logos,
+section#form {
+    block-size: 100vh;
+    padding: 40px;
+}
+
+section#logos {
+    flex: 1;
+    background-color: gray;
+}
+
+section#form {
+    // flex: grow shrink basis
+    flex: 0 0 $form-width;
+}
