@@ -17,41 +17,41 @@
     </section>
 
     <!-- Form Content -->
-    <section id="form">
+    <form id="sign-up" action="" method="post">
 
-        <section>
-            <h3>This is not a real online service! You know you need something like this in your life to help you realise your deepest dreams. Sign up now to get started.</h3>
-            <h3>You know you want to.</h3>
-        </section>
-
-        <form action="" method="post">
-            <section>
-                <h3>Let's do this!</h3>
-
+        <h3>This is not a real online service! Build a healthy mind & body by walking on memorable trails. Sign up now to start your adventure!</h3>
+        <h3>Let's do this!</h3>
+        
+        <div class="form-content">
+            <div class="form-field-container">
                 <label for="first_name">First Name</label>
                 <input type="text" name="first_name" id="first_name" required>
 
-                <label for="last_name">Last Name</label>
-                <input type="text" name="last_name" id="last_name" required>
-
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" required>
-                
-                <!-- NOTE: Phone numbers are assumed to be Australian (see regex pattern) -->
-                <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" id="phone" required>
 
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" required>
+            </div>
+
+            <div class="form-field-container">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name" required>
+
+            <!-- NOTE: Phone numbers are assumed to be Australian (see regex pattern) -->
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone" required>
 
                 <label for="confirm_password">Confirm Password</label>
                 <input type="password" name="confirm_password" id="confirm_password" required>
-            </section>
-            <section>
-                <button type="submit">Create Account</button>
-                <p>Already have an account? <a href="#">Log in</a></p>
-            </section>
-        </form>
-    </section>
+            </div>
+        </div>
+        
+        <section>
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </section>
+    </form>
+
 </body>
 </html>

@@ -9,6 +9,7 @@
 }
 
 $form-width: 62.5%;
+$odin-green: #596D48;
 
 * {
     box-sizing: border-box;
@@ -27,12 +28,13 @@ section#form {
 }
 
 section#logos {
+    // flex: grow shrink (Allows logos section to change size instead of the form section)
     flex: 1 0;
     background-image: url("../assets/hiking-wallpaper.jpeg");
     background-size: cover;
 
     header {
-        margin-top: 100px;
+        margin-top: 30vh;
         block-size: 120px;
 
         display: flex;
@@ -66,8 +68,33 @@ section#logos {
     }
 }
 
-section#form {
-    padding: 1rem;
-    // flex: grow shrink basis
+form#sign-up {
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    // flex: grow shrink basis (i.e. form always has size 62.5%)
     flex: 0 0 $form-width;
+
+    div.form-content {
+        margin-block-end: 1rem;
+
+        display: flex;
+        flex-flow: row wrap;
+
+        div.form-field-container {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                margin-block-end: 1rem;
+            }
+        }
+
+        div.form-field-container:first-child {
+            margin-inline-end: 2rem;
+        }
+    }
 }
