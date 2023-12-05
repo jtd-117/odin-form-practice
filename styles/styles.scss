@@ -27,8 +27,8 @@ section#form {
 }
 
 section#logos {
-    flex: 1;
-    background-image: url("../assets/wallpaper.jpeg");
+    flex: 1 0;
+    background-image: url("../assets/hiking-wallpaper.jpeg");
     background-size: cover;
 
     header {
@@ -43,19 +43,27 @@ section#logos {
         opacity: 0.8;
         
         img {
-            block-size: 6em;
+            block-size: 5em;
+            
+            @media (max-width: 400px) {
+                block-size: 3.8rem;
+            }
         }
 
         h1 {
+            white-space: nowrap;
             padding-top: 20px;
             margin: 0;
+
             font-family: 'norse-bold';
-            font-size: 6rem;
+            font-size: 5rem;
             color: white;
+            
+            @media (max-width: 400px) {
+                font-size: 3.8rem;
+            }
         }
     }
-    // REMOVE LATER - for viewing partitions
-    background-color: gray;
 }
 
 section#form {
