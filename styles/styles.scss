@@ -35,7 +35,6 @@ section#logos {
 
     header {
         margin-top: 30vh;
-        block-size: 120px;
 
         display: flex;
         justify-content: center;
@@ -47,7 +46,7 @@ section#logos {
         img {
             block-size: 5em;
             
-            @media (max-width: 400px) {
+            @media (max-width: 420px) {
                 block-size: 3.8rem;
             }
         }
@@ -61,7 +60,7 @@ section#logos {
             font-size: 5rem;
             color: white;
             
-            @media (max-width: 400px) {
+            @media (max-width: 420px) {
                 font-size: 3.8rem;
             }
         }
@@ -69,8 +68,6 @@ section#logos {
 }
 
 form#sign-up {
-    padding: 2rem;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -78,9 +75,31 @@ form#sign-up {
     // flex: grow shrink basis (i.e. form always has size 62.5%)
     flex: 0 0 $form-width;
 
-    div.form-content {
-        margin-block-end: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serifå;
 
+    section,
+    div.form-content {
+        padding-block: 1rem;
+        padding-inline: 2rem;
+    }
+
+    section {
+        background-color: whitesmoke;
+
+        button[type=submit] {
+            padding-block: 0.5rem;
+            padding-inline: 2rem;
+
+            color: white;
+            font-size: 1rem;
+
+            background-color: $odin-green;
+            border: none;
+            border-radius: 0.5rem;
+        }
+    }
+
+    div.form-content {
         display: flex;
         flex-flow: row wrap;
 
@@ -88,13 +107,31 @@ form#sign-up {
             display: flex;
             flex-direction: column;
 
+            label {
+                font-size: 0.6rem;
+                font-weight: bold;
+            }
+
             input {
                 margin-block-end: 1rem;
+                
+                font-family: Verdana, Geneva, Tahoma, sans-serifå;
             }
         }
 
         div.form-field-container:first-child {
             margin-inline-end: 2rem;
         }
+    }
+
+    section p a {
+        font-weight: bold;
+        color: $odin-green;
+        text-decoration: none;
+    }
+
+    // Make form section take up whole space when mobile responsive
+    @media (max-width: 980px) {
+        flex-grow: 1;
     }
 }

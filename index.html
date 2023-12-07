@@ -19,30 +19,32 @@
     <!-- Form Content -->
     <form id="sign-up" action="" method="post">
 
-        <h3>This is not a real online service! Build a healthy mind & body by walking on memorable trails. Sign up now to start your adventure!</h3>
-        <h3>Let's do this!</h3>
+        <section>
+            <h3>This is not a real online service! Build a healthy mind & body by walking on memorable trails. Sign up now to start your adventure!</h3>
+            <h3>Let's do this!</h3>
+        </section>
         
         <div class="form-content">
             <div class="form-field-container">
-                <label for="first_name">First Name</label>
-                <input type="text" name="first_name" id="first_name" required>
+                <label for="first_name">FIRST NAME*</label>
+                <input type="text" name="first_name" id="first_name" placeholder="e.g. John" required>
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+                <label for="email">EMAIL*</label>
+                <input type="email" name="email" id="email" placeholder="e.g. john.doe@gmail.com" required>
 
-                <label for="password">Password</label>
+                <label for="password">PASSWORD*</label>
                 <input type="password" name="password" id="password" required>
             </div>
 
             <div class="form-field-container">
-                <label for="last_name">Last Name</label>
-                <input type="text" name="last_name" id="last_name" required>
+                <label for="last_name">LAST NAME*</label>
+                <input type="text" name="last_name" id="last_name" placeholder="e.g. Doe" required>
 
             <!-- NOTE: Phone numbers are assumed to be Australian (see regex pattern) -->
-                <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" id="phone" required>
+                <label for="phone">PHONE NUMBER*</label>
+                <input type="tel" name="phone" id="phone" placeholder="e.g. 0412345678" required>
 
-                <label for="confirm_password">Confirm Password</label>
+                <label for="confirm_password">CONFIRM PASSWORD*</label>
                 <input type="password" name="confirm_password" id="confirm_password" required>
             </div>
         </div>
