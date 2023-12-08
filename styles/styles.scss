@@ -123,6 +123,14 @@ form#sign-up {
                 box-shadow: 5px 5px 5px $input-shadow;
                 outline: none;
             }
+
+            input:valid {
+                border-color: $odin-green;
+            }
+
+            input:invalid {
+                border-color: red;
+            }
         }
 
         div.form-field-container:first-child {
