@@ -10,6 +10,7 @@
 
 $form-width: 62.5%;
 $odin-green: #596D48;
+$input-shadow: gray;
 
 * {
     box-sizing: border-box;
@@ -114,8 +115,13 @@ form#sign-up {
 
             input {
                 margin-block-end: 1rem;
-                
+                border-style: none none solid;
                 font-family: Verdana, Geneva, Tahoma, sans-serifå;
+            }
+
+            input:focus {
+                box-shadow: 5px 5px 5px $input-shadow;
+                outline: none;
             }
         }
 
