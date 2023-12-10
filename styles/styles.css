@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/**
+ * @file styles.scss
+ * @description Implments the styles for the sign-up form (i.e. index.html)
+ */
+@font-face {
+  font-family: "norse-bold";
+  src: url("../assets/norse-bold.otf");
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+section#logos,
+section#form {
+  block-size: 100vh;
+}
+
+section#logos {
+  flex: 1 0;
+  background-image: url("../assets/hiking-wallpaper.jpeg");
+  background-size: cover;
+}
+section#logos header {
+  margin-top: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  opacity: 0.8;
+}
+section#logos header img {
+  block-size: 5em;
+}
+@media (max-width: 420px) {
+  section#logos header img {
+    block-size: 3.8rem;
+  }
+}
+section#logos header h1 {
+  white-space: nowrap;
+  padding-top: 20px;
+  margin: 0;
+  font-family: "norse-bold";
+  font-size: 5rem;
+  color: white;
+}
+@media (max-width: 420px) {
+  section#logos header h1 {
+    font-size: 3.8rem;
+  }
+}
+
+form#sign-up {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 0 0 62.5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serifå;
+}
+form#sign-up section,
+form#sign-up div.form-content {
+  padding-block: 1rem;
+  padding-inline: 2rem;
+}
+form#sign-up section {
+  background-color: whitesmoke;
+}
+form#sign-up section button[type=submit] {
+  padding-block: 0.5rem;
+  padding-inline: 2rem;
+  color: white;
+  font-size: 1rem;
+  background-color: #596D48;
+  border: none;
+  border-radius: 0.5rem;
+}
+form#sign-up section p#password-check {
+  color: red;
+}
+form#sign-up div.form-content {
+  display: flex;
+  flex-flow: row wrap;
+}
+form#sign-up div.form-content div.form-field-container {
+  display: flex;
+  flex-direction: column;
+}
+form#sign-up div.form-content div.form-field-container label {
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+form#sign-up div.form-content div.form-field-container input {
+  margin-block-end: 1rem;
+  border-style: none none solid;
+  font-family: Verdana, Geneva, Tahoma, sans-serifå;
+}
+form#sign-up div.form-content div.form-field-container input:focus {
+  box-shadow: 5px 5px 5px gray;
+  outline: none;
+}
+form#sign-up div.form-content div.form-field-container input:valid {
+  border-color: #596D48;
+}
+form#sign-up div.form-content div.form-field-container input:invalid,
+form#sign-up div.form-content div.form-field-container input.invalid-password {
+  border-color: red;
+}
+form#sign-up div.form-content div.form-field-container:first-child {
+  margin-inline-end: 2rem;
+}
+form#sign-up section p a {
+  font-weight: bold;
+  color: #596D48;
+  text-decoration: none;
+}
+@media (max-width: 980px) {
+  form#sign-up {
+    flex-grow: 1;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
