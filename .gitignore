@@ -1,5 +1,5 @@
 # @file .gitignore
 
 # Ignore compiled CSS files
-#*.css
+*.css
 *.css.map
