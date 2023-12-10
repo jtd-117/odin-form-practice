@@ -98,6 +98,10 @@ form#sign-up {
             border: none;
             border-radius: 0.5rem;
         }
+
+        p#password-check {
+            color: red
+        }
     }
 
     div.form-content {

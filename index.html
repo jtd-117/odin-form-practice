@@ -6,7 +6,7 @@
     <link rel="icon" type="image/x-icon" href="assets/odin-logo.png">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="script.js" defer></script>
-    <title>Odin | Sign-up</title>
+    <title>Odin Trails | Sign-up</title>
 </head>
 <body>
 
@@ -44,7 +44,7 @@
 
             <!-- NOTE: Phone numbers are assumed to be Australian (see regex pattern) -->
                 <label for="phone">PHONE NUMBER*</label>
-                <input type="tel" name="phone" id="phone" placeholder="e.g. 0412345678" pattern="04\d{8}" required>
+                <input type="tel" name="phone" id="phone" placeholder="e.g. 0412345678" pattern="04\d{8}" maxlength="10" required>
 
                 <label for="confirm_password">CONFIRM PASSWORD*</label>
                 <input type="password" name="confirm_password" id="confirm_password" required>
@@ -53,7 +53,7 @@
         
         <section>
             <button type="submit">Create Account</button>
-            <aside id="password-check"></aside>
+            <p id="password-check"></p>
             <p>Already have an account? <a href="#">Log in</a></p>
         </section>
     </form>

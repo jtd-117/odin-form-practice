@@ -21,6 +21,8 @@ const validatePassword = () => {
         return true;
     }
     // STEP 4: Indicate that the passwords do not match
+    password.setCustomValidity("Input does not watch with 'CONFIRM PASSWORD'");
+    confirm.setCustomValidity("Input does not watch with 'PASSWORD'");
     return false;
 }
 
@@ -28,7 +30,7 @@ const signUpForm = document.getElementById('sign-up');
 signUpForm.addEventListener('submit', (e) => {
     const passwordMessage = document.getElementById('password-check');
     if (validatePassword() === false) {
-        passwordMessage.textContent = "*Passwords do NOT match!";
+        passwordMessage.textContent = "ERROR: Passwords do NOT match!";
         e.preventDefault();
     }
     else {
