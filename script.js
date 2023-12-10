@@ -5,24 +5,30 @@
 
 /**
  * @description Calculates if the input and confirmation passwords are the same
- * @returns A boolean if the the passwords are equal
+ * @returns A boolean if the passwords are equal
  */
 const validatePassword = () => {
-
     // STEP 1: Get the passwords
     const password = document.getElementById('password');
     const confirm = document.getElementById('confirm_password');
 
     // STEP 2: Calculate password equality
     const cmp = password.value.localeCompare(confirm.value);
+    console.log(cmp);
 
     // STEP 3: Check if the passwords match
     if (cmp === 0) {
+        password.setCustomValidity('');
+        confirm.setCustomValidity('');
+
+        // STEP 3A: Reset the red border class when passwords match
+        password.classList.remove('invalid-password');
+        confirm.classList.remove('invalid-password');
         return true;
     }
-    // STEP 4: Indicate that the passwords do not match
-    password.setCustomValidity("Input does not watch with 'CONFIRM PASSWORD'");
-    confirm.setCustomValidity("Input does not watch with 'PASSWORD'");
+    // STEP 4: Add the red border class for invalid passwords
+    password.classList.add('invalid-password');
+    confirm.classList.add('invalid-password');
     return false;
 }
 
@@ -32,8 +38,8 @@ signUpForm.addEventListener('submit', (e) => {
     if (validatePassword() === false) {
         passwordMessage.textContent = "ERROR: Passwords do NOT match!";
         e.preventDefault();
-    }
-    else {
+    } else {
         passwordMessage.textContent = "";
     }
 });
+

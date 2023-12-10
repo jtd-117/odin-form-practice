@@ -132,7 +132,8 @@ form#sign-up {
                 border-color: $odin-green;
             }
 
-            input:invalid {
+            input:invalid,
+            input.invalid-password {
                 border-color: red;
             }
         }
