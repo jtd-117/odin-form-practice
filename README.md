@@ -7,7 +7,7 @@
 4. [Note](#note)
 
 ## Live Showcase:
-A live showcase can be found by [clicking here]().
+A live showcase can be found by [clicking here](https://jtd-117.github.io/odin-form-practice/).
 
 ## About:
 A basic sign-up form that utilises HTML validation, [Sass](https://sass-lang.com/), & minimal JavaScript for password confirmation.
